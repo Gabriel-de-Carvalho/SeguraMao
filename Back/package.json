@@ -1,0 +1,22 @@
+{
+  "name": "segura-mao-back",
+  "version": "1.0.0",
+  "description": "Backend do projeto Segura a mao desenvolvido na disciplina devweb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabriel-de-Carvalho/SeguraMao.git"
+  },
+  "author": "Gabriel de Carvalho Fonsecca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabriel-de-Carvalho/SeguraMao/issues"
+  },
+  "homepage": "https://github.com/Gabriel-de-Carvalho/SeguraMao#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
