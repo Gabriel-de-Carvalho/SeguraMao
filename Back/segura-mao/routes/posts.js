@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 var falseDados = [
-  {"nome": "gabriel", "mensagem":"lorem ipslum da vida", "apoios": 10},
-  {"nome": "arthur", "mensagem":"lorem ipslum da vida124124124", "apoios": 9},
-  {"nome": "joao", "mensagem":"lorem ipslum da vida0000000000000", "apoios": 5}
+  {"nome": "juan", "mensagem":"lorem ipslum da vida", "apoios": 10},
+  {"nome": "arthur", "mensagem":"lorem ipslum da vida124124124", "apoios": 0},
+  {"nome": "joao", "mensagem":"lorem ipslum da vida0000000000000", "apoios": 0}
 ]
 
 router.get('/', function(req, res, next) {
