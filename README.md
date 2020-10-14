@@ -15,12 +15,9 @@
  1. Clone o repositorio > git clone https://github.com/Gabriel-de-Carvalho/SeguraMao
  2. vá ate o diretorio > cd SeguraMao
  3. para executar o aplicativo web em react:
-    1. > cd front
-    2. > cd react
-    3. > cd segura-mao
-    4. > npm start
+    1. > cd front/react/segura-mao
+    2. > npm start
  4. para executar o servidor:
-    1. > cd back
-    2. > cd segura-mao
+    1. > cd back/segura-mao
     2. > npm start
  
