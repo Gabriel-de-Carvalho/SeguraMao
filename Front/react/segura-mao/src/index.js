@@ -4,10 +4,14 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import ListaPostagem from './listaPostagem.js'
+import Header from './header.js'
+import Footer from './footer.js'
 
 ReactDOM.render(
   <React.StrictMode>
+    <Header/>
     <ListaPostagem />
+    <Footer/>
   </React.StrictMode>,
   document.getElementById('root')
 );

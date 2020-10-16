@@ -3,9 +3,6 @@ import Postagem from './postagem.js'
 
 function ListaPostagem(){
   const[postagens, setPostagens] = useState([
-  {"nome": "gabriel", "mensagem":"lorem ipslum da vida", "apoios": 10},
-  {"nome": "arthur", "mensagem":"lorem ipslum da vida2", "apoios": 9},
-  {"nome": "joao", "mensagem":"lorem ipslum da vida3", "apoios": 5}
 ]);
 
 useEffect(() => {
@@ -19,7 +16,7 @@ useEffect(() => {
       <ul>
       {postagens.map(c =>(
         <li>
-          <Postagem nome={c.nome} conteudo={c.mensagem} apoios={c.apoios}></Postagem>
+          <Postagem nome={c.nome} conteudo={c.mensagem} apoios={c.apoios} id={c.id}></Postagem>
         </li>
       ))}
       </ul>
