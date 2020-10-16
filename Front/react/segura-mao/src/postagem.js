@@ -3,7 +3,7 @@ import React, {useState, useEffect}from 'react';
 function Postagem(props){
   const[apoios, setApoios] = useState(props.apoios)
 
-useEffect( () => {
+useEffect(() => {
   let changes = {'apoios': apoios,
                 'id': props.id};
   fetch("http://localhost:3000/posts/apoio",{
@@ -15,7 +15,7 @@ useEffect( () => {
   })
   .then(response => response.json());
 
-})
+}, [apoios])
 
 
   return (
