@@ -21,7 +21,8 @@ router.post('/apoio', function(req, res, next){
   let id = data.id;
   for(i = 0; i < falseDados.length; i++){
     if(falseDados[i].id == id){
-      falseDados[i] = {...falseDados[i], "apoios": apoios}
+      falseDados[i].apoios = apoios;
+      // falseDados[i] = {...falseDados[i], "apoios": apoios}
     }
   }
   res.json(falseDados);
