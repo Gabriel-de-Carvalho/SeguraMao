@@ -9,7 +9,7 @@ useEffect(() => {
   fetch("http://localhost:3000/posts/apoio",{
     method: "POST",
     body: JSON.stringify(changes),
-    header:{
+    headers:{
       'Content-Type': 'application/json'
     }
   })
