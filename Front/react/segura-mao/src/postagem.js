@@ -19,7 +19,7 @@ useEffect(() => {
 
 
   return (
-    <div class="postagem">
+    <div className="postagem">
       <li>
           <h1>{props.nome}</h1>
           <p>{props.conteudo}</p>
