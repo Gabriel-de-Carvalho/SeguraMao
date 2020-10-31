@@ -8,6 +8,7 @@ export const user = {
 }
 
 export const userContext = React.createContext({
-  user: user,
-  toggleTheme:() => {},
+  user: user
 })
+
+export default userContext;
