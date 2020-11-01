@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-var falseDados = [{"nome": "john", "mensagem":"lorem ipslum da vida", "apoios": 10, "id": 1},
-  {"nome": "arthur", "mensagem":"lorem ipslum da vida2", "apoios": 9,  "id": 2},
-  {"nome": "joao", "mensagem":"lorem ipslum da vida3", "apoios": 5,  "id": 3}];
+var falseDados = [{"nome": "john", "mensagem":"lorem ipslum da vida", "apoios": 10, "id": 1, "curtidos":{2,3}},
+  {"nome": "arthur", "mensagem":"lorem ipslum da vida2", "apoios": 9,  "id": 2, "curtidos": {1,3}},
+  {"nome": "joao", "mensagem":"lorem ipslum da vida3", "apoios": 5,  "id": 3, "curtidos": {1}}];
 
 router.get('/', function(req, res, next) {
   res.json(falseDados);

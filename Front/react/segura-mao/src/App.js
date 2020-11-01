@@ -27,6 +27,10 @@ function App() {
             <Perfil/>
         </Route>
 
+        <Route path="/dados">
+            <Dados/>
+        </Route>
+
       </Switch>
 
     <Footer/>
