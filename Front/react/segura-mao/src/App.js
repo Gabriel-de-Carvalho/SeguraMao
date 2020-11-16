@@ -14,27 +14,35 @@ import {
 
 function App() {
   return (
-    <Router>
+    <div class="grid-template">
+      <Router>
+        <div class="header-main">
       <Header/>
+    </div>
 
+      <div class="main-content">
       <Switch>
-
         <Route path="/" exact>
-          <ListaPostagem />
+          <ListaPostagem class="list-posts" />
         </Route>
 
           <Route path="/login">
-            <Perfil/>
+            <Perfil class="perfil"/>
         </Route>
 
         <Route path="/dados">
-            <Dados/>
+            <Dados class="dados"/>
         </Route>
 
       </Switch>
+    </div>
 
-    <Footer/>
-  </Router>
+    <div class="footer-main">
+      <Footer/>
+    </div>
+    </Router>
+
+  </div>
   );
 }
 

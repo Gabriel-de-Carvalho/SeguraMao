@@ -1,0 +1,12 @@
+.menu-rout ul li{
+  display: inline;
+  margin-right: 2em;
+  text-align: center;
+}
+
+.header{
+  background-color: white;
+  padding: 0;
+  height: 100%;
+  margin: 0;
+}
