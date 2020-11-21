@@ -1,30 +1,24 @@
 var express = require('express');
 var router = express.Router();
+var controllerPosts = require("../controllers/controllerPosts");
 
-var falseDados = [{"nome": "john", "mensagem":"lorem ipslum da vida", "apoios": 10, "id": 1, "curtidos":[2,3]},
-  {"nome": "arthur", "mensagem":"lorem ipslum da vida2", "apoios": 9,  "id": 2, "curtidos": [1,3]},
-  {"nome": "joao", "mensagem":"lorem ipslum da vida3", "apoios": 5,  "id": 3, "curtidos": [1]}];
 
 router.get('/', function(req, res, next) {
-  res.json(falseDados);
+  res.json(controllerPosts.posts);
+})
+
+router.get("/:id/coments", function(req, res, next){
+  res.json(controllerPosts.retornarComentario(req.params.id));
 })
 
 router.post("/", function(req, res, next) {
-  falseDados.push(req.body);
-  res.json(falseDados);
+  let retorno = controllerPosts.novoPost(req.body);
+  res.json(retorno);
   res.status(200);
 })
 
 router.post('/apoio', function(req, res, next){
-  let data = req.body
-  let apoios = data.apoios;
-  let id = data.id;
-  for(i = 0; i < falseDados.length; i++){
-    if(falseDados[i].id == id){
-      falseDados[i].apoios = apoios;
-      // falseDados[i] = {...falseDados[i], "apoios": apoios}
-    }
-  }
-  res.json(falseDados);
+  let retorno = controllerPosts.processar(req.body);
+  res.json(retorno);
 })
 module.exports = router

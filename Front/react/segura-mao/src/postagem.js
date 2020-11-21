@@ -1,7 +1,9 @@
 import React, {useState, useEffect}from 'react';
+import Comentarios from "./Components/Comentarios";
 
 function Postagem(props){
   const[apoios, setApoios] = useState(props.apoios)
+  const[mostrarComents, setComents] = useState(false);
 
 useEffect(() => {
   let changes = {'apoios': apoios,
@@ -15,17 +17,17 @@ useEffect(() => {
   })
   .then(response => response.json());
 
-}, [apoios])
+}, [apoios]);
 
 
   return (
     <div className="postagem">
-      <li>
           <h1>{props.nome}</h1>
           <p>{props.conteudo}</p>
           <p>{apoios}</p>
           <button type="button" name="button" onClick={() => setApoios(apoios + 1)}>apoiar</button>
-      </li>
+          <button type="button" name="butonComment" onClick={() => setComents(true)}/>
+          {mostrarComents ? <Comentarios refPost={props.id}/> : <div></div>}
     </div>
   )
 }

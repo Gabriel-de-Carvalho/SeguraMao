@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Postagem from './postagem.js'
+import "./listaPostagem.css"
 
 function ListaPostagem(){
   const[postagens, setPostagens] = useState([
