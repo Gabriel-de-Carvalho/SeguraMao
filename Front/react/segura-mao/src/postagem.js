@@ -26,7 +26,8 @@ useEffect(() => {
           <p>{props.conteudo}</p>
           <p>{apoios}</p>
           <button type="button" name="button" onClick={() => setApoios(apoios + 1)}>apoiar</button>
-          <button type="button" name="butonComment" onClick={() => setComents(true)}/>
+          <button type="button" name="butonComment" onClick={() => setComents(true)}>Comentarios
+          </button>
           {mostrarComents ? <Comentarios refPost={props.id}/> : <div></div>}
     </div>
   )

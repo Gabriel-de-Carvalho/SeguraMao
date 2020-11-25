@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import "./dados.css";
 function Dados(){
-
+  useEffect(() =>{
+    fetch("http://localhost:3000/graph/").then(response => response.json()).then(data => console.log(data));
+  })
 
   return(
     <svg id="graph" width="800" height="500">
@@ -12,15 +14,18 @@ function Dados(){
         <line x1="100" x2="500" y1="400" y2="400" class="grid"></line>
       </g>
 
-      <g>
+      <g id="label-x">
           <text y="450" x="100">2005</text>
           <text y="450" x="200">2010</text>
           <text y="450" x="300">2015</text>
           <text y="450" x="400">2015</text>
-          <text y="100" x="50">2020</text>
-          <text y="200" x="50">2020</text>
-          <text y="300" x="50">2020</text>
-          <text y="400" x="50">2020</text>
+        </g>
+      <g id="label-y">
+        <text y="100" x="50">2020</text>
+        <text y="200" x="50">2020</text>
+        <text y="300" x="50">2020</text>
+        <text y="400" x="50">2020</text>
+
       </g>
 
       <g>
